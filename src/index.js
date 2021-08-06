@@ -11,16 +11,14 @@ class App extends React.Component {
         /* This will eventually contain some different 
             properties that are relevant to our app. 
         */
-        this.state = {latitude: null,longitude: null,error: null,random:"ivan"};
-        // this.state = {longitude: null};
+        this.state = { latitude: null, longitude: null, error: null, random:"ivan" };
         window.navigator.geolocation.getCurrentPosition(
             (position)  => {
                 // to update our state object, we call setState
                 this.setState({ latitude: position.coords.latitude, longitude: position.coords.longitude });
-                // this.setState({ longitude: position.coords.longitude });
             },
             (err)       => {
-                this.setState({error:err.message})
+                this.setState({ error:err.message })
             }
         );
     }
@@ -28,7 +26,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <ErrorComponent error={this.state.error} latitude={this.state.latitude}  longitude={this.state.longitude}/>
+                <ErrorComponent error={this.state.error} latitude={this.state.latitude}  longitude={this.state.longitude} />
             </div>
         );
     };

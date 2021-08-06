@@ -5,7 +5,7 @@ class ErrorComponent extends React.Component{
         return(
             <>
                 {/* Conditional Rendering */}
-                {this.props.error !== null &&  <h1>Error Handling {this.props.error}</h1>}
+                { this.props.error !== null &&  <h1>Error Handling { this.props.error }</h1>}
                 <p>Latitude: { this.props.latitude }</p>
                 <p>Longitude: { this.props.longitude }</p>
             </>
