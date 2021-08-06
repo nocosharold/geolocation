@@ -28,9 +28,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <p>edit mo ulit</p>
                 <ErrorComponent error={this.state.error} latitude={this.state.latitude}  longitude={this.state.longitude}/>
-                
             </div>
         );
     };
