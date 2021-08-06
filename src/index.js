@@ -11,7 +11,7 @@ class App extends React.Component {
         /* This will eventually contain some different 
             properties that are relevant to our app. 
         */
-        this.state = { latitude: null, longitude: null, error: null, random:"ivan" };
+        this.state = { latitude: null, longitude: null, error: null };
         window.navigator.geolocation.getCurrentPosition(
             (position)  => {
                 // to update our state object, we call setState
