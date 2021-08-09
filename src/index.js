@@ -12,6 +12,9 @@ class App extends React.Component {
             properties that are relevant to our app. 
         */
         this.state = { latitude: null, longitude: null, error: null };
+    }
+    
+    componentDidMount() {
         window.navigator.geolocation.getCurrentPosition(
             (position)  => {
                 // to update our state object, we call setState
@@ -22,6 +25,7 @@ class App extends React.Component {
             }
         );
     }
+    
     // A required React method when using class-based component.
     render() {
         return (
